@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>即時時鐘</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="clock-container">
+    <!-- 背景裝飾光圈 -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+
+    <!-- 日期卡片 -->
+    <div class="date-card">
+      <div class="date-label">DATE</div>
+      <div class="date-value" id="date">----/--/--</div>
+      <div class="weekday-value" id="weekday">--------</div>
+    </div>
+
+    <!-- 時鐘主體 -->
+    <div class="clock-card">
+      <!-- 環形進度裝飾 -->
+      <svg class="clock-ring" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="105" />
+        <circle class="ring-progress" cx="110" cy="110" r="105" id="ringProgress" />
+      </svg>
+
+      <!-- 時分秒 -->
+      <div class="time-wrapper">
+        <div class="time-segment">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label">小時</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-segment">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label">分鐘</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-segment">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label">秒鐘</span>
+        </div>
+      </div>
+
+      <!-- AM / PM -->
+      <div class="ampm-badge" id="ampm">AM</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
